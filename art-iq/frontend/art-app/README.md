@@ -1,53 +1,77 @@
-# Next.js & HeroUI Template
+# Art-IQ Frontend
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+The **Art-IQ Frontend** is a Next.js application built with TypeScript and Tailwind CSS, providing an interface for uploading images, viewing art style predictions, and applying style transformations. It communicates with the FastAPI backend to process images.
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+## 📂 Directory Structure
 
-## Technologies Used
-
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI v2](https://heroui.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
-
-## How to Use
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
+```plaintext
+art-app/
+├── app/                    # Next.js app directory
+│   ├── about/              # About page
+│   ├── analyze/            # Art style prediction page
+│   ├── styles/             # Styles page
+│   ├── layout.tsx          # Root layout
+│   ├── page.tsx            # Home page
+│   └── providers.tsx       # Context providers
+├── components/             # Reusable React components
+│   ├── sections/           # Hero and feature sections
+│   ├── DropzoneButton.tsx  # Image upload component
+│   ├── navbar.tsx          # Navigation bar
+│   └── theme-switch.tsx    # Theme toggle
+├── public/                 # Static assets (images, favicon)
+├── styles/                 # Global CSS
+├── config/                 # Fonts and site metadata
+├── types/                  # TypeScript types
+├── next.config.js          # Next.js configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+├── package.json            # Dependencies and scripts
+└── README.md               # This file
 ```
 
-### Install dependencies
+## 🛠️ Prerequisites
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+- Node.js 18+
+- npm
+- Backend API running at `http://localhost:8000`
 
-```bash
-npm install
-```
+## 🚀 Setup
 
-### Run the development server
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend/art-app
+   ```
 
-```bash
-npm run dev
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Setup pnpm (optional)
+3. Ensure the backend API is running at `http://localhost:8000`.
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
+   The frontend will be available at `http://localhost:3000`.
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+## ✨ Features
 
-## License
+- **Home Page**: Introduces Art-IQ with a hero section and features overview.
+- **Analyze Page**: Upload images to get top-3 art style predictions.
+- **Analyze Page**: Upload images to get top-3 art style predictions.
+- **About Page**: Project and team information.
+- **Theme Switch**: Light/dark mode toggle.
 
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+## 📋 Usage
+
+1. Open `http://localhost:3000` in a browser.
+2. Go to the **Analyze** page to upload an image and view predictions.
+4. Explore **Styles** and **About** pages for more information.
+
+## ⚙️ Configuration
+
+- **API Endpoint**: The frontend assumes the backend is at `http://localhost:8000`.
+- **Styling**: Customize Tailwind CSS in `tailwind.config.js`.
+- **Fonts**: Configure fonts in `config/fonts.ts`.

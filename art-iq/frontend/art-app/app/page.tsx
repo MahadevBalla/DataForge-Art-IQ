@@ -1,7 +1,6 @@
 "use client";
 
 import HeroSection from "@/components/sections/hero-section";
-import Features from "@/components/sections/features";
 import { Button, Card, CardBody, Divider } from "@heroui/react";
 import Link from "next/link";
 
@@ -48,14 +47,9 @@ export default function Home() {
         </div>
       </section>
 
-      <Features />
-
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-500/75 to-pink-400/75 text-white">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-4xl font-bold mb-6">Ready to discover your art's style?</h2>
-          <p className="text-lg mb-8 opacity-90">
-            Join thousands of artists who have unlocked new insights about their work
-          </p>
           <Button
             as={Link}
             href="/analyze"

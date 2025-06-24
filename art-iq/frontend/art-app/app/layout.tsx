@@ -1,7 +1,6 @@
 import { Metadata, Viewport } from 'next';
 import { Providers } from './providers';
 import { siteConfig } from '@/config/site';
-import { fontSans } from '@/config/fonts';
 import Navbar from '@/components/navbar';
 import '../styles/globals.css';
 
